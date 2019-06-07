@@ -1,1 +1,5 @@
-rmdir "C:\htdocs" && mklink /J "C:\htdocs" "C:\Users\%username%\Documents\GitHub"
+START "C:\xampp\apache_stop.bat"
+rmdir "C:\xampp\htdocs"
+mklink /J "C:\xampp\htdocs" "C:\Users\%username%\Documents\GitHub\"
+START "C:\xampp\apache_start.bat"
+explorer "C:\xampp\htdocs"
